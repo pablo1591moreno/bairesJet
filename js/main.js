@@ -22,22 +22,22 @@ menuToggle.addEventListener('click', () => {
 
 var avionesDatabase = {
     1: {
-        title: "Avion1",
+        title: "Avion 1",
         description: "Descripción del Avion 1",
         images: 6
     },
     2: {
-        title: "Avion2",
+        title: "Avion 2",
         description: "Descripción del Avion 2",
         images: 8
     },
     3: {
-        title: "Avion3",
+        title: "Avion 3",
         description: "Descripción del Avion 3",
         images: 8
     },
     4: {
-        title: "Avion4",
+        title: "Avion 4",
         description: "Descripción del Avion 4",
         images: 8
     }
