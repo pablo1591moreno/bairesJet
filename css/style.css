@@ -327,19 +327,9 @@ form>.fields {
   display: -ms-flex;
   display: flex;
   flex-wrap: wrap;
-  width: calc(100% + 3em);
-  margin: -1.5em 0 2em -1.5em;
+  width: 100%;
 }
 
-form>.fields>.field {
-  -moz-flex-grow: 0;
-  -ms-flex-grow: 0;
-  flex-grow: 0;
-  -ms-flex-shrink: 0;
-  flex-shrink: 0;
-  padding: 1.5em 0 0 1.5em;
-  width: calc(100% - 1.5em);
-}
 
 form>.fields>.field.half {
   width: calc(50% - 0.75em);
@@ -423,7 +413,6 @@ select {
   color: rgba(255, 255, 255, 0.35) !important;
   opacity: 1;
 }
-
 
 
 
@@ -749,6 +738,7 @@ section .avi {
 /* Estilos para Móvil (hasta 980px) */
 @media screen and (max-width: 736px) {
 
+
   body,
   input,
   select {
@@ -954,7 +944,7 @@ section .avi {
   .modal-content {
     margin: 18% auto;
     padding: 8px;
-  }  
+  }
 
   #modal-images img {
     margin-bottom: 8px;
