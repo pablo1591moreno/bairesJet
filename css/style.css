@@ -464,20 +464,20 @@ button,
 
 
 /*-------------------------------- tipos */
+
 .tipos {
-  display: -moz-flex;
-  display: -ms-flex;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 0 2em 0;
+  justify-content: center;
+  gap:1.5rem;
 }
+
 
 .tipos article {
   padding: 1.75em 1.75em 0.1em 1.75em;
   background-color: #ffffff;
   border-radius: 5px;
-  margin: 1.5em 3em 1.5em 0;
-  width: calc(50% - 1.5em);
+  width: calc(33.33% - 1.5em); /* Cambiado a 33.33% para tres columnas */
 }
 
 .tipos article .major {
@@ -493,9 +493,6 @@ button,
   color: #4176a2;
 }
 
-.tipos article:nth-child(2n) {
-  margin-right: 0;
-}
 
 .tipos article .image {
   border-radius: 5px 5px 0 0;
@@ -510,6 +507,7 @@ button,
   border-radius: 5px 5px 0 0;
   width: 100%;
 }
+
 
 /*--------------------------------------- Servicios */
 .servicio {
@@ -686,6 +684,7 @@ section .avi {
 }
 
 /*---------------------------------- nosotros */
+
 .descripcionNosotros{
 font-weight: 100;
 }
