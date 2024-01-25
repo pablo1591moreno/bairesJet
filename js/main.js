@@ -22,26 +22,47 @@ menuToggle.addEventListener('click', () => {
 
 var avionesDatabase = {
     1: {
-        title: "Avion 1",
-        description: "Descripción del Avion 1",
+        title: "Learjet 60",
+        description: "Experimenta la velocidad incomparable del Learjet 60, con una velocidad de crucero de 860 km/h. Este avión de lujo tiene un alcance de 4,000 km, capacidad para 8-9 pasajeros y está equipado con potentes motores Pratt & Whitney. Descubre el lujo en movimiento.",
         images: 6
     },
     2: {
-        title: "Avion 2",
-        description: "Descripción del Avion 2",
+        title: "King Air 200",
+        description: "Descubre la elegancia y eficiencia del King Air 200. Con una velocidad de crucero de 525 km/h y un alcance de 3,800 km, este avión ofrece comodidad a 7-9 pasajeros. Equipado con motores Prat & Whitney PT6A, el King Air 200 redefine el viaje de negocios.",
         images: 8
     },
     3: {
-        title: "Avion 3",
-        description: "Descripción del Avion 3",
+        title: "King Air 90",
+        description: "Explora la versatilidad del King Air 90, con una velocidad de crucero variable de aproximadamente 400 km/h. Perfecto para vuelos cortos con un alcance de 2,100 km, este avión ofrece capacidad para 4-6 pasajeros y cuenta con motores Pratt & Whitney PT6A.",
         images: 8
     },
     4: {
-        title: "Avion 4",
-        description: "Descripción del Avion 4",
+        title: "Learjet 35",
+        description: "Sumérgete en la elegancia y rendimiento del Learjet 35. Con una velocidad de crucero de 850 km/h y un alcance de 3,500 km, este avión de alta gama ofrece capacidad para 6-8 pasajeros. Equipado con dos motores Garrett TFE731, el Learjet 35 es la definición de lujo en vuelo.",
         images: 8
+    },
+    5: {
+        title: "Fairchild Metroliner III",
+        description: "Descubre la comodidad y amplitud del Fairchild Metroliner III. Con una velocidad de crucero variable de alrededor de 500 km/h y un alcance de 2,300 km, este avión puede acomodar hasta 19 pasajeros. Equipado con motores Pratt & Whitney Canada PT6A, redefine el viaje grupal de alta gama.",
+        images: 8
+    },
+    6: {
+        title: "Cessna Citation III",
+        description: "Experimenta la potencia y eficiencia del Cessna Citation III. Con una velocidad de crucero de 850 km/h y un alcance de 3,600 km, este avión ejecutivo ofrece capacidad para 6-8 pasajeros. Equipado con dos motores Garrett TFE731, el Citation III es la elección perfecta para viajes de negocios.",
+        images: 8
+    },
+    7: {
+        title: "Challenger 600",
+        description: "Explora la excelencia en viajes de larga distancia con el Challenger 600. Con una velocidad de crucero de aproximadamente 850 km/h y un alcance de alrededor de 7,400 km, este avión de lujo puede acomodar de 9 a 19 pasajeros. Equipado con dos motores General Electric CF34, el Challenger 600 redefine el vuelo de larga distancia.",
+        images: 8
+    },
+    8: {
+        title: "Navajo 350",
+        description: "Descubre la versatilidad del Navajo 350, con una velocidad de crucero de 420 km/h y un alcance de 2,800 km. Este avión puede acomodar hasta 8 pasajeros, ofreciendo una experiencia de vuelo cómoda y eficiente para grupos más pequeños.",
+        images: 6
     }
 };
+
 
 var articles = document.querySelectorAll('.tipos article');
 
@@ -104,6 +125,8 @@ function showModal(avionInfo) {
         }
     }
 }
+
+
 //--------------------------------------------------------- form
 
 function validateNumberInput(input) {

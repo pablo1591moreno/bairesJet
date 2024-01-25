@@ -321,7 +321,6 @@ form {
 form> :last-child {
   margin-bottom: 0;
 }
-
 form>.fields {
   display: -moz-flex;
   display: -ms-flex;
@@ -414,7 +413,25 @@ select {
   opacity: 1;
 }
 
+#form .inner .field select {
+  width: 100%;
+  padding: 0.5em;
+  box-sizing: border-box;
+  height: 2.75em;
+}
 
+#form .inner .field select:focus {
+  border-color: #5b6ba6;
+}
+
+.field.tipoNave{
+  display: flex;
+  justify-content: center;
+}
+
+.aeronave{
+  width: 48%;
+}
 
 /*----------------------------------------- Button */
 input[type=submit],
@@ -666,6 +683,11 @@ section .avi {
   /* Hacer que el botón crezca un 10% más al pasar el ratón */
   transition: transform 0.5s ease-in-out;
   /* Agregar transición suave */
+}
+
+/*---------------------------------- nosotros */
+.descripcionNosotros{
+font-weight: 100;
 }
 
 
@@ -940,6 +962,18 @@ section .avi {
   form> :last-child {
     margin-bottom: 0;
   }
+
+  #form .inner .field select {
+    width: 100%;
+    padding: 0.5em;
+    box-sizing: border-box;
+    height: 2.75em;
+}
+
+#form .inner .field select:focus {
+    border-color: #5b6ba6;
+}
+
 
   .modal-content {
     margin: 18% auto;
