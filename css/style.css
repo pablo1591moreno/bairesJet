@@ -321,6 +321,7 @@ form {
 form> :last-child {
   margin-bottom: 0;
 }
+
 form>.fields {
   display: -moz-flex;
   display: -ms-flex;
@@ -424,12 +425,12 @@ select {
   border-color: #5b6ba6;
 }
 
-.field.tipoNave{
+.field.tipoNave {
   display: flex;
   justify-content: center;
 }
 
-.aeronave{
+.aeronave {
   width: 48%;
 }
 
@@ -469,7 +470,7 @@ button,
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap:1.5rem;
+  gap: 1.5rem;
 }
 
 
@@ -477,7 +478,8 @@ button,
   padding: 1.75em 1.75em 0.1em 1.75em;
   background-color: #ffffff;
   border-radius: 5px;
-  width: calc(33.33% - 1.5em); /* Cambiado a 33.33% para tres columnas */
+  width: calc(33.33% - 1.5em);
+  /* Cambiado a 33.33% para tres columnas */
 }
 
 .tipos article .major {
@@ -542,7 +544,7 @@ section .avi {
   border: none;
   font-size: 40px;
   cursor: pointer;
-  background-color: #FFD43B;
+  background-color: #25D366;
   padding: 8px 10px;
   border-radius: 100%;
 }
@@ -701,8 +703,8 @@ section .avi {
 
 /*---------------------------------- nosotros */
 
-.descripcionNosotros{
-font-weight: 100;
+.descripcionNosotros {
+  font-weight: 100;
 }
 
 
@@ -746,15 +748,6 @@ font-weight: 100;
   .wrapper .inner {
     padding: 3em 3em 1em 3em;
     width: 100%;
-  }
-
-  .wrapper .image {
-    margin: 0 2em 2em 0;
-    width: 32em;
-  }
-
-  .wrapper:nth-child(2n-1) .image {
-    margin: 0 0 2em 2em;
   }
 
   .tipos article {
@@ -805,14 +798,6 @@ font-weight: 100;
     align-items: center;
   }
 
-  .wrapper .image {
-    width: 100%;
-    margin: 0 0 2em 0;
-  }
-
-  .wrapper:nth-child(2n-1) .image {
-    margin: 0 0 2em 0;
-  }
 
   #banner {
     padding: 5em 2em 4.25em 2em;
@@ -917,6 +902,9 @@ font-weight: 100;
 
 /* Estilos adicionales para Móvil (hasta 480px) */
 @media screen and (max-width: 480px) {
+
+
+  
   .tipos {
     display: block;
   }
@@ -983,11 +971,11 @@ font-weight: 100;
     padding: 0.5em;
     box-sizing: border-box;
     height: 2.75em;
-}
+  }
 
-#form .inner .field select:focus {
+  #form .inner .field select:focus {
     border-color: #5b6ba6;
-}
+  }
 
 
   .modal-content {
@@ -997,6 +985,15 @@ font-weight: 100;
 
   #modal-images img {
     margin-bottom: 8px;
+  }
+
+  /*---------------------------------------  Whatsapp */
+ 
+  #botonFlotante {
+    bottom: 85%;
+    border: none;
+    font-size: 25px;
+    padding: 7px 9px;
   }
 
 }
