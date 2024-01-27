@@ -771,7 +771,7 @@ section .avi {
   body,
   input,
   select {
-    font-size: 10pt;
+    font-size: 12pt;
   }
 
   .wrapper {
