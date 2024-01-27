@@ -94,7 +94,7 @@ function showModal(avionInfo) {
     // Agregar las imágenes al modal (puedes personalizar esto según tus necesidades)
     for (var i = 1; i <= avionInfo.images; i++) {
         var img = document.createElement('img');
-        img.src = '/img/'+ avionInfo.title +'/'+ i +'.png';
+        img.src = 'img/'+ avionInfo.title +'/'+ i +'.png';
         modalImages.appendChild(img);
     }
 
