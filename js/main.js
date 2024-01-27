@@ -136,7 +136,7 @@ function validateNumberInput(input) {
 
 //--------------------------------------------------------- Whatsapp
 
-document.getElementById('boton-flotante').addEventListener('click', function() {
+document.getElementById('botonFlotante').addEventListener('click', function() {
     // Reemplaza el número de teléfono con el que deseas comunicarte en el siguiente enlace.
     var telefono = "+15612991396"; // Cambia esto con tu número de teléfono
   
