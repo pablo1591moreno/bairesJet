@@ -841,7 +841,10 @@ section .avi {
   }
 
   #header img {
-    max-width: 35%;
+    max-width: 200px;
+    /* Establece el ancho máximo absoluto del logo */
+    height: auto;
+    /* Para mantener la proporción de aspecto */
     display: block;
   }
 
@@ -910,7 +913,7 @@ section .avi {
 @media screen and (max-width: 480px) {
 
 
-  
+
   .tipos {
     display: block;
   }
@@ -998,7 +1001,7 @@ section .avi {
   }
 
   /*---------------------------------------  Whatsapp */
- 
+
   #botonFlotante {
     bottom: 65%;
     border: none;
