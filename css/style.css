@@ -533,13 +533,21 @@ section .avi {
 }
 
 /*---------------------------------------  Whatsapp */
-#botonFlotante {
+#contenedorBoton {
   position: fixed;
-  bottom: 55%;
+  bottom: 66%;
   right: 20px;
   transform: translateY(50%);
-  padding: 10px 20px;
-  border: none;
+  text-align: center;
+}
+
+#textoBoton {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+#botonFlotante {
   font-size: 40px;
   cursor: pointer;
   background-color: #25D366;
