@@ -533,19 +533,20 @@ section .avi {
 }
 
 /*---------------------------------------  Whatsapp */
-
-#boton-flotante {
+#botonFlotante {
   position: fixed;
-  bottom: 50%;
-  right: 0;
+  bottom: 55%;
+  right: 20px;
   transform: translateY(50%);
   padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
   border: none;
-  border-radius: 5px;
+  font-size: 40px;
   cursor: pointer;
+  background-color: #FFD43B;
+  padding: 8px 10px;
+  border-radius: 100%;
 }
+
 
 /*---------------------------------------  Wrapper */
 .wrapper {
