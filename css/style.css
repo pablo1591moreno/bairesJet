@@ -479,7 +479,6 @@ button,
   background-color: #ffffff;
   border-radius: 5px;
   width: calc(33.33% - 1.5em);
-  /* Cambiado a 33.33% para tres columnas */
 }
 
 .tipos article .major {
@@ -935,7 +934,7 @@ section .avi {
   }
 
   #form .inner .column {
-    width: 75%;
+    width: 88%;
     /* Cambia de 48% a 100% para ocupar toda la pantalla */
   }
 
@@ -985,6 +984,10 @@ section .avi {
 
   #modal-images img {
     margin-bottom: 8px;
+  }
+
+  .aeronave {
+    width: 70%;
   }
 
   /*---------------------------------------  Whatsapp */
