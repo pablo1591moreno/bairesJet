@@ -183,7 +183,6 @@ h6 {
 /*-------------------------------- Banner */
 #banner {
   padding: 9em 0 5em;
-  background-image: url("img/fondo1.jpg");
   background-position: center, center;
   background-size: cover;
 }
