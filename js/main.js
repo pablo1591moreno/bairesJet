@@ -1,14 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-    var body = document.body;
-
-    // Agregar la clase 'is-preload' al cargar la página
-    body.classList.add("is-preload");
-
-    // Eliminar la clase 'is-preload' después de un tiempo (en este caso, 100ms)
-    setTimeout(function () {
-        body.classList.remove("is-preload");
-    }, 100);
-});
 
 
 //--------------------------------------------------------- MENU HAMBURGUESA
@@ -156,3 +145,32 @@ document.getElementById('botonFlotante').addEventListener('click', function () {
     // Abrir enlace en una nueva pestaña
     window.open(enlaceWhatsApp);
 });
+
+
+
+
+//---------------------------------------------------------- Animacion 
+
+document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('scroll', function() {
+      const elements = document.querySelectorAll('.fade-in');
+      elements.forEach(function(element) {
+        if (isElementInViewport(element)) {
+          element.classList.add('appear');
+        }
+      });
+    });
+  
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+  });
+  
+
+  

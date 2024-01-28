@@ -1014,3 +1014,27 @@ section .avi {
     padding: .5em 1.5em 0.1em 1.5em;
   }
 }
+
+
+/*---------------------------------------  Animacion */
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Aplicar la animación de fade-in solo cuando el elemento está en el viewport */
+.fade-in {
+  opacity: 0;
+}
+
+.appear {
+  animation: fadeIn 0.5s ease forwards;
+}
+
