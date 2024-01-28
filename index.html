@@ -65,7 +65,7 @@
 			<div class="inner">
 				<h2 class="major">Cotiza por mail</h2>
 				<div class="form-contact-wrapper">
-					<form method="post" action="/php/formulario.php">
+					<form method="post" action="#">
 						<div class="fields">
 							<div class="column">
 								<div class="field">
@@ -80,7 +80,8 @@
 							<div class="column">
 								<div class="field">
 									<label for="quantity">Cantidad de pasajeros</label>
-									<input type="text" name="quantity" id="quantity" pattern="[0-9]*" oninput="validateNumberInput(this)" />
+									<input type="text" name="quantity" id="quantity" pattern="[0-9]*"
+										oninput="validateNumberInput(this)" />
 								</div>
 								<div class="field">
 									<label for="contactEmail">Email de contacto</label>
@@ -88,7 +89,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="field tipoNave">
+						<div class="field tipoNave"> 
 							<div class="aeronave">
 								<label for="aircraftType">Tipo de Aeronave</label>
 								<select name="aircraftType" id="aircraftType">
@@ -105,7 +106,7 @@
 					</form>
 				</div>
 			</div>
-		</section>		
+		</section>
 
 
 		<!-- SERVICIOS -->
