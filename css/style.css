@@ -841,7 +841,7 @@ section .avi {
   }
 
   #header img {
-    max-width: 20px;
+    max-width: 35%;
     display: block;
   }
 
