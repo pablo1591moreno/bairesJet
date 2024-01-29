@@ -1039,7 +1039,7 @@ section .avi {
 }
 
 
-/*---------------------------------------  Animacion MODAL */
+/* Animación de apertura del modal */
 @keyframes modalFadeIn {
   from {
     opacity: 0;
@@ -1056,9 +1056,4 @@ section .avi {
   /* Otras propiedades del modal */
   opacity: 0; /* Inicialmente oculto */
   animation: modalFadeIn 0.5s ease forwards; /* Duración y tipo de animación */
-}
-
-/* Ajustes del contenido del modal */
-.modal-content {
-  /* Otras propiedades del contenido */
 }
