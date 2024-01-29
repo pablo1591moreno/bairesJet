@@ -1038,3 +1038,27 @@ section .avi {
   animation: fadeIn 0.5s ease forwards;
 }
 
+
+/*---------------------------------------  Animacion MODAL */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplicar la animación al modal */
+.modal {
+  /* Otras propiedades del modal */
+  opacity: 0; /* Inicialmente oculto */
+  animation: modalFadeIn 0.5s ease forwards; /* Duración y tipo de animación */
+}
+
+/* Ajustes del contenido del modal */
+.modal-content {
+  /* Otras propiedades del contenido */
+}

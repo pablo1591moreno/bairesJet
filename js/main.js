@@ -9,6 +9,7 @@ menuToggle.addEventListener('click', () => {
     menuToggle.classList.toggle('active');
 });
 
+//--------------------------------------------------------- MODAL
 var avionesDatabase = {
     1: {
         title: "Gulfstream 5",
