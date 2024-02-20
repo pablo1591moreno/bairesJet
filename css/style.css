@@ -138,10 +138,25 @@ h6 {
   display: none;
 }
 
+#header .logoyMenu {
+  max-width: 170px; /* Ancho máximo del contenedor del logo */
+  display: flex;
+  align-items: center;
+}
+
 #header img {
-  max-width: 170px;
+  max-width: 100%; /* El logo ocupará el 100% del ancho disponible */
+  height: auto;
   display: block;
 }
+
+/* Compatibilidad con pseudo-elementos */
+.logoyMenu::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 
 #header {
   transition: background-color 0.2s ease-in-out;
