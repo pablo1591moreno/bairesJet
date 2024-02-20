@@ -139,8 +139,7 @@ h6 {
 }
 
 #header img {
-  max-height: 90%;
-  max-width: 90%;
+  max-width: 170px;
   display: block;
 }
 
@@ -433,7 +432,10 @@ select {
   width: 48%;
 }
 
-
+#confirmationMessage{
+  margin-top: 10px;
+text-align: center;
+}
 
 /*----------------------------------------- Button */
 input[type=submit],
@@ -510,7 +512,8 @@ button,
   border-radius: 5px 5px 0 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajuste para cubrir manteniendo la relación de aspecto */
+  object-fit: cover;
+  /* Ajuste para cubrir manteniendo la relación de aspecto */
 }
 
 
@@ -864,7 +867,7 @@ section .avi {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 45px;
+    height: 20px;
   }
 
   #menuToggle {
@@ -915,7 +918,7 @@ section .avi {
 @media screen and (max-width: 480px) {
 
 
-  
+
   .tipos {
     display: block;
   }
@@ -1003,7 +1006,7 @@ section .avi {
   }
 
   /*---------------------------------------  Whatsapp */
- 
+
   #botonFlotante {
     bottom: 65%;
     border: none;
@@ -1025,12 +1028,13 @@ section .avi {
 
 @keyframes fadeIn {
   from {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
+
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -1050,6 +1054,7 @@ section .avi {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1059,6 +1064,8 @@ section .avi {
 /* Aplicar la animación al modal */
 .modal {
   /* Otras propiedades del modal */
-  opacity: 0; /* Inicialmente oculto */
-  animation: modalFadeIn 0.5s ease forwards; /* Duración y tipo de animación */
+  opacity: 0;
+  /* Inicialmente oculto */
+  animation: modalFadeIn 0.5s ease forwards;
+  /* Duración y tipo de animación */
 }

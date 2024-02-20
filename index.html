@@ -63,55 +63,56 @@
 
 		<section id="form">
 			<div class="inner">
-				<h2 class="major">Cotiza por mail</h2>
-				<div class="form-contact-wrapper">
-					<form action="https://formsubmit.co/general@bairesjet.com" method="POST">
-						<div class="fields">
-							<div class="column">
-								<div class="field">
-									<label for="from">Origen</label>
-									<input type="text" name="from" id="from" />
-								</div>
-								<div class="field">
-									<label for="to">Destino</label>
-									<input type="text" name="to" id="to" />
-								</div>
-							</div>
-							<div class="column">
-								<div class="field">
-									<label for="quantity">Cantidad de pasajeros</label>
-									<input type="text" name="quantity" id="quantity" pattern="[0-9]*"
-										oninput="validateNumberInput(this)" />
-								</div>
-								<div class="field">
-									<label for="contactEmail">Email de contacto</label>
-									<input type="email" name="contactEmail" id="contactEmail" />
-								</div>
-							</div>
-						</div>
-						<div class="field tipoNave">
-							<div class="aeronave">
-								<label for="aircraftType">Tipo de Aeronave</label>
-								<select name="aircraftType" id="aircraftType">
-									<option value="piston">Piston</option>
-									<option value="turboprop">Turbohélice</option>
-									<option value="jet">Jet</option>
-									<option value="helicopter">Helicóptero</option>
-								</select>
-							</div>
-						</div>
-						<div class="actions">
-							<button type="submit" value="Send Message" class="button">enviar</button>
-						</div>
-						<input type="hidden" name="_next" value="www.bairesjet.com">
-						<input type="hidden" name="_captcha" value="false">
-					</form>
+			  <h2 class="major">Cotiza por mail</h2>
+			  <div class="form-contact-wrapper">
+				<form id="cotizacionForm" action="https://formsubmit.co/general@bairesjet.com" method="POST">
+				  <div class="fields">
+					<div class="column">
+					  <div class="field">
+						<label for="from">Origen</label>
+						<input type="text" name="from" id="from" required>
+					  </div>
+					  <div class="field">
+						<label for="to">Destino</label>
+						<input type="text" name="to" id="to" required>
+					  </div>
+					</div>
+					<div class="column">
+					  <div class="field">
+						<label for="quantity">Cantidad de pasajeros</label>
+						<input type="text" name="quantity" id="quantity" pattern="[0-9]*" oninput="validateNumberInput(this)" required>
+					  </div>
+					  <div class="field">
+						<label for="contactEmail">Email de contacto</label>
+						<input type="email" name="contactEmail" id="contactEmail" required>
+					  </div>
+					</div>
+				  </div>
+				  <div class="field tipoNave">
+					<div class="aeronave">
+					  <label for="aircraftType">Tipo de Aeronave</label>
+					  <select name="aircraftType" id="aircraftType" required>
+						<option value="piston">Piston</option>
+						<option value="turboprop">Turbohélice</option>
+						<option value="jet">Jet</option>
+						<option value="helicopter">Helicóptero</option>
+					  </select>
+					</div>
+				  </div>
+				  <div class="actions">
+					<button type="submit" value="Send Message" class="button">enviar</button>
 				</div>
+				<div id="confirmationMessage" style="display: block;">
+				  <p>Su mensaje ha sido enviado correctamente.</p>
+				</div>
+				  <input type="hidden" name="_next" value="www.bairesjet.com">
+				  <input type="hidden" name="_captcha" value="false">
+				</form>
+			  </div>
 			</div>
-		</section>
+		  </section>
 
-
-
+		  
 
 		<!-- SERVICIOS -->
 		<section>

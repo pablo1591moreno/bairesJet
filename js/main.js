@@ -135,11 +135,44 @@ function showModal(avionInfo) {
 //--------------------------------------------------------- form
 
 
-
+// Función para validar campos numéricos
 function validateNumberInput(input) {
-    input.value = input.value.replace(/\D/g, ''); // Eliminar caracteres no numéricos
+  input.value = input.value.replace(/[^0-9]/g, '');
 }
 
+// Obtener el formulario
+const form = document.getElementById('cotizacionForm');
+
+// Validar el formulario antes de enviarlo
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevenir el envío del formulario por defecto
+
+  // Verificar si todos los campos están completos
+  const fields = form.querySelectorAll('input, select');
+  let isValid = true;
+  fields.forEach(function(field) {
+    if (!field.checkValidity()) {
+      isValid = false;
+    }
+  });
+
+  // Si todos los campos son válidos, mostrar el modal y enviar el formulario
+  if (isValid) {
+    showModal();
+    setTimeout(function() {
+      form.submit();
+    }, 2000); // Enviar el formulario después de 2 segundos
+  }
+});
+
+function showModal() {
+    const confirmationMessage = document.getElementById('confirmationMessage');
+    confirmationMessage.style.display = 'block';
+    setTimeout(function() {
+      confirmationMessage.style.display = 'none';
+    }, 2000); // Ocultar el mensaje después de 2 segundos
+  }
+  
 
 //--------------------------------------------------------- Whatsapp
 
