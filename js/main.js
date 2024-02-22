@@ -38,7 +38,7 @@ var avionesDatabase = {
     },
     6: {
         title: "Learjet 31",
-        description: "xxxxx",
+        description: "Descubre la eficiencia del Learjet 31, un avión ambulancia de alta gama con una velocidad de crucero de 820 km/h y un alcance de 3.000 km. Equipado con dos motores Garrett TFE731-2, ofrece una solución confiable para trasladar pacientes con comodidad y seguridad. Su diseño compacto y equipamiento médico de última generación garantizan un vuelo seguro y confortable para el paciente y el acompañante.<br>*Los colores, materiales y modelos pueden variar según la disposición de las aeronaves.",
         images: 2
     },
     7: {
@@ -67,7 +67,6 @@ var avionesDatabase = {
         images: 2
     }
 }
-
 
 var articles = document.querySelectorAll('.tipos article');
 
@@ -122,9 +121,7 @@ function showModal(avionInfo) {
     function closeModalHandler(event) {
         if (event.target === modal || event.target === closeModal) {
             modal.classList.remove('show');
-            // Remover el h3 del modal al cerrarlo
-            modalContent.removeChild(modalContent.firstChild);
-            // Remover los event listeners para evitar problemas de duplicación
+            modal.removeChild(modal.firstChild);
             closeModal.removeEventListener('click', closeModalHandler);
             window.removeEventListener('click', closeModalHandler);
         }
