@@ -63,56 +63,60 @@
 
 		<section id="form">
 			<div class="inner">
-			  <h2 class="major">Cotiza por mail</h2>
-			  <div class="form-contact-wrapper">
-				<form id="cotizacionForm" action="https://formsubmit.co/general@bairesjet.com" method="POST">
-				  <div class="fields">
-					<div class="column">
-					  <div class="field">
-						<label for="from">Origen</label>
-						<input type="text" name="from" id="from" required>
-					  </div>
-					  <div class="field">
-						<label for="to">Destino</label>
-						<input type="text" name="to" id="to" required>
-					  </div>
-					</div>
-					<div class="column">
-					  <div class="field">
-						<label for="quantity">Cantidad de pasajeros</label>
-						<input type="text" name="quantity" id="quantity" pattern="[0-9]*" oninput="validateNumberInput(this)" required>
-					  </div>
-					  <div class="field">
-						<label for="contactEmail">Email de contacto</label>
-						<input type="email" name="contactEmail" id="contactEmail" required>
-					  </div>
-					</div>
-				  </div>
-				  <div class="field tipoNave">
-					<div class="aeronave">
-					  <label for="aircraftType">Tipo de Aeronave</label>
-					  <select name="aircraftType" id="aircraftType" required>
-						<option value="piston">Piston</option>
-						<option value="turboprop">Turbohélice</option>
-						<option value="jet">Jet</option>
-						<option value="helicopter">Helicóptero</option>
-					  </select>
-					</div>
-				  </div>
-				  <div class="actions">
-					<button type="submit" value="Send Message" class="button">enviar</button>
+				<h2 class="major">Cotiza por mail</h2>
+				<div class="form-contact-wrapper">
+					<form id="cotizacionForm" action="https://formsubmit.co/general@bairesjet.com" method="POST">
+						<div class="fields">
+							<div class="column">
+								<div class="field">
+									<label for="name">Nombre</label>
+									<input type="text" name="name" id="name" required>
+								</div>
+								<div class="field">
+									<label for="from">Origen</label>
+									<input type="text" name="from" id="from" required>
+								</div>
+								<div class="field">
+									<label for="to">Destino</label>
+									<input type="text" name="to" id="to" required>
+								</div>
+							</div>
+							<div class="column">
+								<div class="field">
+									<label for="quantity">Cantidad de pasajeros</label>
+									<input type="text" name="quantity" id="quantity" pattern="[0-9]*"
+										oninput="validateNumberInput(this)" required>
+								</div>
+								<div class="field">
+									<label for="contactEmail">Email de contacto</label>
+									<input type="email" name="contactEmail" id="contactEmail" required>
+								</div>
+								<div class="field">
+									
+										<label for="aircraftType">Tipo de Aeronave</label>
+										<select name="aircraftType" id="aircraftType" required>
+											<option value="piston">Piston</option>
+											<option value="turboprop">Turbohélice</option>
+											<option value="jet">Jet</option>
+											<option value="helicopter">Helicóptero</option>
+										</select>
+								</div>
+							</div>
+						</div>
+						<div class="actions">
+							<button type="submit" value="Send Message" class="button">enviar</button>
+						</div>
+						<div id="confirmationMessage" style="display:none;">
+							<p>Su mensaje ha sido enviado correctamente.</p>
+						</div>
+						<input type="hidden" name="_next" value="https://bairesjet.com">
+						<input type="hidden" name="_captcha" value="false">
+					</form>
 				</div>
-				<div id="confirmationMessage" style="display:none;">
-				  <p>Su mensaje ha sido enviado correctamente.</p>
-				</div>
-				  <input type="hidden" name="_next" value="https://bairesjet.com">
-				  <input type="hidden" name="_captcha" value="false">
-				</form>
-			  </div>
 			</div>
-		  </section>
+		</section>
 
-		  
+
 
 		<!-- SERVICIOS -->
 		<section>
@@ -241,7 +245,7 @@
 									alt="avion de vuelo privado" /></a>
 							<h3>Fairchild Metroliner III</h3>
 						</article>
-<!--
+						<!--
 						<article class="fade-in" data-id="11" data-title="Avion 11"
 							data-description="Descripción del Avion 11">
 							<a href="#" class="image"><img src="img/recursos/portada.jpg"
@@ -300,11 +304,11 @@
 			<div class="style3">
 				<h2 class="align-center">Contacto</h2>
 				<div class="redes-sociales">
-					<a href="https://www.instagram.com/bairesjet?igsh=MTA0cHRmc3BubDQybA==" target="_blank" class="social-icon"><i
-							class="fab fa-instagram"></i></a>
+					<a href="https://www.instagram.com/bairesjet?igsh=MTA0cHRmc3BubDQybA==" target="_blank"
+						class="social-icon"><i class="fab fa-instagram"></i></a>
 					<a href="https://www.linkedin.com/company/baires-jet/" target="_blank" class="social-icon"><i
 							class="fab fa-linkedin"></i></a>
-<!--
+					<!--
 							<a href="https://twitter.com/tu_cuenta" target="_blank" class="social-icon"><i
 							class="fab fa-twitter"></i></a>
 							-->

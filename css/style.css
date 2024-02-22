@@ -438,10 +438,6 @@ select {
   border-color: #5b6ba6;
 }
 
-.field.tipoNave {
-  display: flex;
-  justify-content: center;
-}
 
 .aeronave {
   width: 48%;
