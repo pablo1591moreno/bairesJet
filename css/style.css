@@ -862,7 +862,7 @@ section .avi {
   }
 
   #header img {
-    max-width: 35%;
+    max-width: 20%;
     display: block;
   }
 
@@ -876,11 +876,10 @@ section .avi {
     text-align: center;
   }
 
-  .logoyMenu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 20px;
+  #header .logoyMenu {
+      max-width: 100%;
+      display: flex;
+      align-items: center;
   }
 
   #menuToggle {
