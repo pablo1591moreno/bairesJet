@@ -131,7 +131,6 @@ function showModal(avionInfo) {
     }
 }
 
-
 //--------------------------------------------------------- form
 
 
@@ -158,14 +157,14 @@ form.addEventListener('submit', function(event) {
 
   // Si todos los campos son válidos, mostrar el modal y enviar el formulario
   if (isValid) {
-    showModal();
+    showText();
     setTimeout(function() {
       form.submit();
     }, 2000); // Enviar el formulario después de 2 segundos
   }
 });
 
-function showModal() {
+function showText() {
     const confirmationMessage = document.getElementById('confirmationMessage');
     confirmationMessage.style.display = 'block';
     setTimeout(function() {
