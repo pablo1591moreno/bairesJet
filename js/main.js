@@ -68,65 +68,61 @@ var avionesDatabase = {
     }
 }
 
-var articles = document.querySelectorAll('.tipos article');
 
-// Agregar un evento de clic a cada artículo
-articles.forEach(function (article) {
-    article.addEventListener('click', function (event) {
-        // Prevenir la acción predeterminada del enlace
-        event.preventDefault();
+document.addEventListener("DOMContentLoaded", function() {
+    // Obtener el modal
+    var modal = document.getElementById("myModal");
 
-        // Obtener el ID del avión desde el atributo data-id
-        var id = article.dataset.id;
+    // Obtener todos los elementos con la clase "image" dentro de los artículos
+    var images = document.querySelectorAll(".fade-in .image");
 
-        // Obtener la información del avión desde la base de datos
-        var avionInfo = avionesDatabase[id];
+    // Iterar sobre cada elemento y añadir un evento de clic
+    images.forEach(function(image) {
+        image.addEventListener("click", function() {
+            // Obtener el artículo padre del elemento clicado
+            var article = image.closest("article");
+            // Obtener el id del artículo
+            var articleId = article.getAttribute("data-id");
+            // Obtener la información del artículo de la base de datos
+            var articleInfo = avionesDatabase[articleId];
+            // Establecer el título y la descripción en el modal
+            document.getElementById("modal-title").innerText = articleInfo.title;
+            document.getElementById("modal-description").innerHTML = articleInfo.description;
 
-        // Mostrar el modal con la información del avión
-        showModal(avionInfo);
+            // Vaciar el contenedor de imágenes del modal
+            var modalImagesContainer = document.getElementById("modal-images");
+            modalImagesContainer.innerHTML = "";
+
+            // Agregar las imágenes al contenedor del modal
+            for (var i = 1; i <= articleInfo.images; i++) {
+                var img = document.createElement("img");
+                img.src = "img/" + articleInfo.title + "/" + i +".png";
+                modalImagesContainer.appendChild(img);
+            }
+
+            // Mostrar el modal
+            modal.classList.add("show");
+        });
+    });
+
+    // Obtener el elemento de cierre del modal
+    var closeBtn = document.getElementsByClassName("close")[0];
+
+    // Añadir evento de clic al botón de cierre
+    closeBtn.addEventListener("click", function() {
+        // Ocultar el modal
+        modal.classList.remove("show");
+    });
+
+    // Cerrar el modal si se hace clic fuera del contenido del modal
+    window.addEventListener("click", function(event) {
+        if (event.target == modal) {
+            modal.classList.remove("show");
+        }
     });
 });
 
-// Función para mostrar el modal con la información del avión
-function showModal(avionInfo) {
-    // Obtener el contenedor de imágenes del modal
-    var modalImages = document.getElementById('modal-images');
 
-    // Eliminar cualquier imagen existente del modal
-    modalImages.innerHTML = '';
-
-    // Agregar las imágenes al modal (puedes personalizar esto según tus necesidades)
-    for (var i = 1; i <= avionInfo.images; i++) {
-        var img = document.createElement('img');
-        img.src = 'img/' + avionInfo.title + '/' + i + '.png';
-        modalImages.appendChild(img);
-    }
-
-    // Mostrar el modal
-    var modal = document.getElementById('myModal');
-    modal.classList.add('show');
-
-    // Agregar el título y la descripción al modal
-    var modalTitle = document.getElementById('modal-title');
-    modalTitle.innerHTML = avionInfo.title;
-
-    var modalDescription = document.getElementById('modal-description');
-    modalDescription.innerHTML = avionInfo.description;
-
-    // Cerrar el modal al hacer clic en la "x" o fuera del contenido del modal
-    var closeModal = document.querySelector('.close');
-    closeModal.addEventListener('click', closeModalHandler);
-    window.addEventListener('click', closeModalHandler);
-
-    function closeModalHandler(event) {
-        if (event.target === modal || event.target === closeModal) {
-            modal.classList.remove('show');
-            modal.removeChild(modal.firstChild);
-            closeModal.removeEventListener('click', closeModalHandler);
-            window.removeEventListener('click', closeModalHandler);
-        }
-    }
-}
 
 //--------------------------------------------------------- form
 
@@ -152,29 +148,9 @@ form.addEventListener('submit', function(event) {
     const formData = new FormData(form); // Crear un objeto FormData para recopilar datos del formulario
     formData.append('name', name); // Agregar el nombre al objeto FormData
 
-    showText();
-    setTimeout(function() {
-      fetch(form.getAttribute('action'), {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => {
-        if (response.ok) {
-          form.reset(); // Restablecer el formulario después de enviarlo con éxito
-        }
-      })
-      .catch(error => console.error('Error al enviar el formulario:', error));
-    }, 2000); // Enviar el formulario después de 2 segundos
   }
 });
 
-function showText() {
-    const confirmationMessage = document.getElementById('confirmationMessage');
-    confirmationMessage.style.display = 'block';
-    setTimeout(function() {
-      confirmationMessage.style.display = 'none';
-    }, 2000); // Ocultar el mensaje después de 2 segundos
-  }
 
 //--------------------------------------------------------- Whatsapp
 
