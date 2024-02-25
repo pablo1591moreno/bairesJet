@@ -68,7 +68,6 @@ var avionesDatabase = {
     }
 }
 
-
 document.addEventListener("DOMContentLoaded", function() {
     // Obtener el modal
     var modal = document.getElementById("myModal");
@@ -78,7 +77,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Iterar sobre cada elemento y añadir un evento de clic
     images.forEach(function(image) {
-        image.addEventListener("click", function() {
+        image.addEventListener("click", function(event) {
+            // Prevenir la acción predeterminada del enlace
+            event.preventDefault();
             // Obtener el artículo padre del elemento clicado
             var article = image.closest("article");
             // Obtener el id del artículo
@@ -96,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Agregar las imágenes al contenedor del modal
             for (var i = 1; i <= articleInfo.images; i++) {
                 var img = document.createElement("img");
-                img.src = "img/" + articleInfo.title + "/" + i +".png";
+                img.src = "img/" + articleInfo.title + "/" + i + ".png";
                 modalImagesContainer.appendChild(img);
             }
 
@@ -109,9 +110,11 @@ document.addEventListener("DOMContentLoaded", function() {
     var closeBtn = document.getElementsByClassName("close")[0];
 
     // Añadir evento de clic al botón de cierre
-    closeBtn.addEventListener("click", function() {
+    closeBtn.addEventListener("click", function(event) {
         // Ocultar el modal
         modal.classList.remove("show");
+        // Prevenir la propagación del evento
+        event.stopPropagation();
     });
 
     // Cerrar el modal si se hace clic fuera del contenido del modal
@@ -123,8 +126,13 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
 //--------------------------------------------------------- form
+
+
+// Función para validar campos numéricos
+function validateNumberInput(input) {
+  input.value = input.value.replace(/[^0-9]/g, '');
+}
 
 // Obtener el formulario
 const form = document.getElementById('cotizacionForm');
@@ -144,10 +152,10 @@ form.addEventListener('submit', function(event) {
 
   // Si todos los campos son válidos, mostrar el modal y enviar el formulario
   if (isValid) {
-    const name = document.getElementById('name').value; // Obtener el valor del campo nombre
-    const formData = new FormData(form); // Crear un objeto FormData para recopilar datos del formulario
-    formData.append('name', name); // Agregar el nombre al objeto FormData
-
+    showText();
+    setTimeout(function() {
+      form.submit();
+    }, 2000); // Enviar el formulario después de 2 segundos
   }
 });
 
