@@ -129,36 +129,38 @@ document.addEventListener("DOMContentLoaded", function() {
 //--------------------------------------------------------- form
 
 
-// Función para validar campos numéricos
-function validateNumberInput(input) {
-  input.value = input.value.replace(/[^0-9]/g, '');
-}
-
-// Obtener el formulario
-const form = document.getElementById('cotizacionForm');
-
-// Validar el formulario antes de enviarlo
-form.addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevenir el envío del formulario por defecto
-
-  // Verificar si todos los campos están completos
-  const fields = form.querySelectorAll('input, select');
-  let isValid = true;
-  fields.forEach(function(field) {
-    if (!field.checkValidity()) {
-      isValid = false;
-    }
-  });
-
-  // Si todos los campos son válidos, mostrar el modal y enviar el formulario
-  if (isValid) {
-    showText();
-    setTimeout(function() {
-      form.submit();
-    }, 2000); // Enviar el formulario después de 2 segundos
+  // Función para validar campos numéricos
+  function validateNumberInput(input) {
+    input.value = input.value.replace(/[^0-9]/g, '');
   }
-});
 
+  // Obtener el formulario
+  const form = document.getElementById('cotizacionForm');
+
+  // Obtener el modal
+  const modal = document.getElementById('modalForm');
+
+  // Validar el formulario antes de enviarlo
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevenir el envío del formulario por defecto
+
+    // Verificar si todos los campos están completos
+    const fields = form.querySelectorAll('input, select');
+    let isValid = true;
+    fields.forEach(function(field) {
+      if (!field.checkValidity()) {
+        isValid = false;
+      }
+    });
+
+    // Mostrar modal
+    modal.style.display = 'block';
+
+    // Ocultar modal después de 2 segundos
+    setTimeout(function() {
+      modal.style.display = 'none';
+    }, 2000);
+  });
 
 //--------------------------------------------------------- Whatsapp
 
