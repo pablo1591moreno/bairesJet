@@ -130,37 +130,35 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   // Función para validar campos numéricos
-  function validateNumberInput(input) {
+function validateNumberInput(input) {
     input.value = input.value.replace(/[^0-9]/g, '');
-  }
+}
 
-  // Obtener el formulario
-  const form = document.getElementById('cotizacionForm');
+// Obtener el formulario
+const form = document.getElementById('cotizacionForm');
 
-  // Obtener el modal
-  const modal = document.getElementById('modalForm');
-
-  // Validar el formulario antes de enviarlo
-  form.addEventListener('submit', function(event) {
+// Validar el formulario antes de enviarlo
+form.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevenir el envío del formulario por defecto
 
     // Verificar si todos los campos están completos
     const fields = form.querySelectorAll('input, select');
     let isValid = true;
     fields.forEach(function(field) {
-      if (!field.checkValidity()) {
-        isValid = false;
-      }
+        if (!field.checkValidity()) {
+            isValid = false;
+        }
     });
 
-    // Mostrar modal
-    modal.style.display = 'block';
+    if (isValid) {
+        // Si el formulario es válido, enviarlo
+        form.submit();
+    } else {
+        // Si el formulario no es válido, mostrar un mensaje de error o tomar alguna otra acción
+        alert("Por favor completa todos los campos correctamente.");
+    }
+});
 
-    // Ocultar modal después de 2 segundos
-    setTimeout(function() {
-      modal.style.display = 'none';
-    }, 2000);
-  });
 
 //--------------------------------------------------------- Whatsapp
 

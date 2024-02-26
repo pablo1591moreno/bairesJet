@@ -139,13 +139,15 @@ h6 {
 }
 
 #header .logoyMenu {
-  max-width: 170px; /* Ancho máximo del contenedor del logo */
+  max-width: 170px;
+  /* Ancho máximo del contenedor del logo */
   display: flex;
   align-items: center;
 }
 
 #header img {
-  max-width: 100%; /* El logo ocupará el 100% del ancho disponible */
+  max-width: 100%;
+  /* El logo ocupará el 100% del ancho disponible */
   height: auto;
   display: block;
 }
@@ -443,9 +445,9 @@ select {
   width: 48%;
 }
 
-#confirmationMessage{
+#confirmationMessage {
   margin-top: 10px;
-text-align: center;
+  text-align: center;
 }
 
 /*----------------------------------------- Button */
@@ -888,9 +890,9 @@ section .avi {
   }
 
   #header .logoyMenu {
-      max-width: 100%;
-      display: flex;
-      align-items: center;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
   }
 
   #menuToggle {
@@ -1016,6 +1018,21 @@ section .avi {
 
   .aeronave {
     width: 70%;
+  }
+
+  /*---------------------------------- MODAL FORM */
+
+  .modalForm {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    color: #4176a2;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
   }
 
   /*---------------------------------------  Whatsapp */
