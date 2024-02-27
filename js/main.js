@@ -129,9 +129,12 @@ document.addEventListener("DOMContentLoaded", function() {
 //--------------------------------------------------------- form
 
 
-  // Función para validar campos numéricos
-function validateNumberInput(input) {
-    input.value = input.value.replace(/[^0-9]/g, '');
+// Función para limpiar los campos del formulario
+function clearFormFields() {
+    const fields = form.querySelectorAll('input, select');
+    fields.forEach(function(field) {
+        field.value = ''; // Limpiar el valor del campo
+    });
 }
 
 // Obtener el formulario
@@ -153,11 +156,16 @@ form.addEventListener('submit', function(event) {
     if (isValid) {
         // Si el formulario es válido, enviarlo
         form.submit();
+        // Limpiar los campos del formulario
+        clearFormFields();
+        // Mostrar el modal
+        document.getElementById('modalForm').style.display = 'block';
     } else {
         // Si el formulario no es válido, mostrar un mensaje de error o tomar alguna otra acción
         alert("Por favor completa todos los campos correctamente.");
     }
 });
+
 
 
 //--------------------------------------------------------- Whatsapp
