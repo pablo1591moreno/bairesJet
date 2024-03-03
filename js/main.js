@@ -10,7 +10,66 @@ menuToggle.addEventListener('click', () => {
 });
 
 //--------------------------------------------------------- MODAL
-var avionesDatabase = {
+var avionesDatabaseIn = {
+    1: {
+        title: "Gulfstream 5",
+        description: "The G5 is a large private jet, ideal for long-range flights. Its spacious and luxurious cabin can accommodate up to 8-10 passengers in reclining seats. Equipped with a full galley and a spacious bathroom, as well as a rear luggage compartment and APU for greater ground comfort.<br> *Colors, materials, and models may vary depending on aircraft layout.",
+        images: 2
+    },
+    2: {
+        title: "Challenger 600",
+        description: "Explore excellence in long-distance travel with the Challenger 600. With a cruising speed of approximately 850 km/h and a range of around 7,400 km, this luxury aircraft can accommodate 9 to 19 passengers. Equipped with two General Electric CF34 engines, the Challenger 600 redefines long-distance flight.<br> *Colors, materials, and models may vary depending on aircraft layout.",
+        images: 2
+    },
+    3: {
+        title: "Learjet 60",
+        description: "Experience the unmatched speed of the Learjet 60, with a cruising speed of 860 km/h. This luxury aircraft has a range of 4,000 km, seating for 8-9 passengers, and is equipped with powerful Pratt & Whitney engines. Discover luxury in motion.<br> *Colors, materials, and models may vary depending on aircraft layout.",
+        images: 2
+    },
+    4: {
+        title: "Learjet 45",
+        description: "The Learjet 45 is a modern luxury aircraft with a comfortable cabin that can accommodate up to 8 passengers in a double club configuration. Equipped with a full galley and toilet, as well as a luggage compartment and APU for greater comfort and convenience on the ground.<br> *Colors, materials, and models may vary depending on aircraft layout.",
+        images: 2
+    },
+    5: {
+        title: "Learjet 35",
+        description: "Immerse yourself in the elegance and performance of the Learjet 35. With a cruising speed of 850 km/h and a range of 3,500 km, this high-end aircraft offers seating for 6-8 passengers. Equipped with two Garrett TFE731 engines, the Learjet 35 is the definition of luxury in flight.<br> *Colors, materials, and models may vary depending on aircraft layout.",
+        images: 2
+    },
+    6: {
+        title: "Learjet 31",
+        description: "Discover the efficiency of the Learjet 31, a high-end air ambulance with a cruising speed of 820 km/h and a range of 3,000 km. Equipped with two Garrett TFE731-2 engines, it offers a reliable solution for transporting patients comfortably and safely. Its compact design and state-of-the-art medical equipment ensure a safe and comfortable flight for the patient and companion.<br>*Colors, materials, and models may vary depending on aircraft layout.",
+        images: 2
+    },
+    7: {
+        title: "Cessna Citation III",
+        description: "Experience the power and efficiency of the Cessna Citation III. With a cruising speed of 850 km/h and a range of 3,600 km, this executive aircraft offers seating for 6-8 passengers. Equipped with two Garrett TFE731 engines, the Citation III is the perfect choice for business travel.<br> *Colors, materials, and models may vary depending on aircraft layout.",
+        images: 2
+    },
+    8: {
+        title: "King Air 200",
+        description: "Discover the elegance and efficiency of the King Air 200. With a cruising speed of 525 km/h and a range of 3,800 km, this aircraft offers comfort to 7-9 passengers. Equipped with Pratt & Whitney PT6A engines, the King Air 200 redefines business travel.<br> *Colors, materials, and models may vary depending on aircraft layout.",
+        images: 2
+    },
+    9: {
+        title: "King Air 90",
+        description: "Explore the versatility of the King Air 90, with a variable cruising speed of approximately 400 km/h. Perfect for short flights with a range of 2,100 km, this aircraft offers seating for 4-6 passengers and features Pratt & Whitney PT6A engines.<br> *Colors, materials, and models may vary depending on aircraft layout.",
+        images: 2
+    },
+    10: {
+        title: "Fairchild Metroliner III",
+        description: "Discover the comfort and spaciousness of the Fairchild Metroliner III. With a variable cruising speed of around 500 km/h and a range of 2,300 km, this aircraft can accommodate up to 19 passengers. Equipped with Pratt & Whitney Canada PT6A engines, it redefines high-end group travel.<br> *Colors, materials, and models may vary depending on aircraft layout.",
+        images: 2
+    },
+    11: {
+        title: "Navajo 350",
+        description: "Discover the versatility of the Navajo 350, with a cruising speed of 420 km/h and a range of 2,800 km. This aircraft can accommodate up to 8 passengers, offering a comfortable and efficient flight experience for smaller groups.<br> *Colors, materials, and models may vary depending on aircraft layout.",
+        images: 2
+    }
+};
+
+
+var avionesDatabaseEs = {
     1: {
         title: "Gulfstream 5",
         description: "El G5 es un jet privado de gran tamaño, ideal para vuelos de largo alcance. Su cabina espaciosa y lujosa puede acomodar hasta 8-10 pasajeros en asientos reclinables. Equipado con un galley completo y un amplio baño, además de una bodega de equipaje trasera y APU para mayor comodidad en tierra.<br> *Los colores, materiales y modelos pueden variar según la disposición de las aeronaves.",
@@ -68,6 +127,7 @@ var avionesDatabase = {
     }
 }
 
+
 document.addEventListener("DOMContentLoaded", function() {
     // Obtener el modal
     var modal = document.getElementById("myModal");
@@ -84,8 +144,13 @@ document.addEventListener("DOMContentLoaded", function() {
             var article = image.closest("article");
             // Obtener el id del artículo
             var articleId = article.getAttribute("data-id");
-            // Obtener la información del artículo de la base de datos
-            var articleInfo = avionesDatabase[articleId];
+            // Obtener la información del artículo de la base de datos según el idioma
+            var articleInfo;
+            if (window.location.pathname.includes('/in/')) { // Si está en la versión en inglés
+                articleInfo = avionesDatabaseIn[articleId];
+            } else { // Si está en la versión en español
+                articleInfo = avionesDatabaseEs[articleId];
+            }
             // Establecer el título y la descripción en el modal
             document.getElementById("modal-title").innerText = articleInfo.title;
             document.getElementById("modal-description").innerHTML = articleInfo.description;
@@ -97,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Agregar las imágenes al contenedor del modal
             for (var i = 1; i <= articleInfo.images; i++) {
                 var img = document.createElement("img");
-                img.src = "img/" + articleInfo.title + "/" + i + ".png";
+                img.src = "/img/" + articleInfo.title + "/" + i + ".png";
                 modalImagesContainer.appendChild(img);
             }
 
@@ -124,6 +189,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+//--------------------------------------------------------- idioma
+
+function changeLanguage(language) {
+    if (language === 'es') {
+        window.location.href = "/index.html"; // redirige a la página en español
+    } else if (language === 'en') {
+        window.location.href = "/in/index.in.html"; // redirige a la página en inglés
+    }
+}
 
 
 //--------------------------------------------------------- form
@@ -165,7 +240,6 @@ form.addEventListener('submit', function(event) {
         alert("Por favor completa todos los campos correctamente.");
     }
 });
-
 
 
 //--------------------------------------------------------- Whatsapp

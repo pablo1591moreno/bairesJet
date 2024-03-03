@@ -747,6 +747,38 @@ section .avi {
   font-weight: 100;
 }
 
+/*---------------------------------- boton idioma */
+
+#languageSwitch {
+  position: absolute;
+  top: 7%;
+  right: 3%;
+}
+
+#languageSwitch div {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+#languageSwitch button img {
+  width: 30px;
+}
+
+#languageSwitch p {
+  margin: 0; /* Simplificado: ya que el padding es 0 por defecto */
+}
+
+#languageSwitch button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+
+
 
 /*------------------------------------------------ Responsive */
 @media screen and (max-width: 1680px) {

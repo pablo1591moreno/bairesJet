@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Vuelos privados en Argentina, vuelos charter, taxi aéreo y ejecutivos | Baires Jet</title>
+	<meta name="description"
+		content="Taxi aéreo, vuelos charter, vuelos privados, vuelos ejecutivos, renta de aviones, vuelos de bautismo, paseos en avión, servicios aéreos, destinos y tarifas en Argentina.">
+	<meta name="keywords"
+		content="jets privados, vuelos privados, avion privado precio, jets privados, vuelo privado, precio jet privado, renta de aviones privados, renta de jet privado, vuelos privados precios, renta avion privado, vuelos privados baratos, renta jet privado, renta de jet privado precio, vuelos en jet privado, precio de un jet privado, viajes privados en avion, viajes en jet privado, charter privado, vuelos jet, precio de aviones privados, vuelos ejecutivos, vuelo jet privado, jet privado vuelos, renta de avioneta privada, renta de jet privados, avion jet privado, aviones de lujo privados, aviones jet privados, aviones jets privados, helicoptero privado precio, vuelo jet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Baires Jet">
+	<meta name="robots" content="index, follow">
+	<meta name="distribution" content="global">
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/recursos/minilogo.png">
+
+	<!-- Estilos y fuentes -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="is-menu-visible">
+
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="logoyMenu">
+				<a href=""><img src="/img/recursos/bairesjetlogo.png" alt="Logo"></a>
+				<div id="menuToggle">
+					<i class="fas fa-bars"></i>
+				</div>
+			</div>
+			<nav id="menu">
+				<div class="inner">
+					<ul class="links">
+						<li><a href="#form">Quote</a></li>
+						<li><a href="#servicios">Services</a></li>
+						<li><a href="#aviones">Airplanes</a></li>
+						<li><a href="#nosotros">About Us</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+
+		<!-- Banner -->
+		<section id="banner" style="background-image: url('/img/recursos/fondo1.jpg');">
+			<div id="languageSwitch">
+				<p>idiomas</p>
+				<div>
+					<button onclick="changeLanguage('es')"><img src="/img/recursos/es.png" alt="Español"></button>
+					<button onclick="changeLanguage('en')"><img src="/img/recursos/in.png" alt="English"></button>
+				</div>
+			</div>
+			<div class="inner">
+				<h1 class="major">Enjoy the Exclusivity of Private Flights</h1>
+				<p>Get quick and personalized quotes for your luxury trip!</p>
+			</div>
+		</section>
+
+
+
+		<section id="form">
+			<div class="inner">
+				<h2 class="major">Get a Quote by Email</h2>
+				<div class="form-contact-wrapper">
+					<form id="cotizacionForm" action="https://formsubmit.co/info@bairesjet.com" method="POST">
+						<div class="fields">
+							<div class="column">
+								<div class="field">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" required>
+								</div>
+								<div class="field">
+									<label for="from">Origin</label>
+									<input type="text" name="from" id="from" required>
+								</div>
+								<div class="field">
+									<label for="to">Destination</label>
+									<input type="text" name="to" id="to" required>
+								</div>
+							</div>
+							<div class="column">
+								<div class="field">
+									<label for="quantity">Number of Passengers</label>
+									<input type="text" name="quantity" id="quantity" pattern="[0-9]*"
+										oninput="validateNumberInput(this)" required>
+								</div>
+								<div class="field">
+									<label for="contactEmail">Contact Email</label>
+									<input type="email" name="contactEmail" id="contactEmail" required>
+								</div>
+								<div class="field">
+									<label for="aircraftType">Aircraft Type</label>
+									<select name="aircraftType" id="aircraftType" required>
+										<option value="piston">Piston</option>
+										<option value="turboprop">Turboprop</option>
+										<option value="jet">Jet</option>
+										<option value="helicopter">Helicopter</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="actions">
+							<button type="submit" class="button">Send</button>
+						</div>
+						<input type="hidden" name="_next" value="https://bairesjet.com">
+						<input type="hidden" name="_captcha" value="false">
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<!-- Modal -->
+		<div id="modalForm" class="modalForm">Sent</div>
+
+		<!-- SERVICIOS -->
+		<section>
+			<section class="wrapper style2">
+				<div class="inner">
+					<h2 class="major servicio fade-in">Private Flight Services</h2>
+				</div>
+				<div id="servicios" class="inner tipos servi">
+					<article class="fade-in">
+						<a class="image"><img src="/img/recursos/Vuelos_Privados.png" alt="private flight" /></a>
+						<div class="content">
+							<h2 class="major">Private Flights</h2>
+							<p>You can feel <strong>at home</strong> while traveling to your <strong>family
+									vacations</strong> or preparing for your next <strong>professional</strong> success.
+								Experience our <strong>aircraft</strong> as if they were <strong>yours</strong>, backed
+								by our <strong>crew</strong>, who will always take care of every detail of your
+								experience.</p>
+						</div>
+					</article>
+					<article class="fade-in">
+						<a class="image"><img src="/img/recursos/Vuelos_Charter.png" alt="charter flight" /></a>
+						<div class="content">
+							<h2 class="major">Charter Flights</h2>
+							<p><strong>Organize trips</strong> for <strong>large groups</strong> and experience the
+								<strong>comfort</strong>, <strong>exclusivity</strong>, and <strong>security</strong> of
+								a <strong>first-class</strong> flight. Count on <strong>personalized services</strong>
+								and be amazed by a <strong>crew</strong> dedicated to providing you and your guests with
+								the best attention.
+							</p>
+						</div>
+					</article>
+					<article class="fade-in">
+						<a class="image"><img src="/img/recursos/Vuelos_Helitour.png" alt="helicopter flight" /></a>
+						<div class="content">
+							<h2 class="major">Helitour Flights</h2>
+							<p><strong>Discover</strong> the <strong>wonders of the city</strong> from a new angle and
+								enjoy an <strong>unparalleled panorama</strong> from the heights with this
+								<strong>Helicopter City Tour</strong>.
+							</p>
+						</div>
+					</article>
+				</div>
+			</section>
+		</section>
+
+
+		<!-- AVIONES -->
+		<section class="wrapper avi">
+			<div class="inner">
+				<h2 class="major fade-in">Private Aircraft</h2>
+				<p class="fade-in">Explore our selection of <strong>private aircraft</strong>, from the
+					<strong>Gulfstream 5</strong> to the <strong>Learjet 60</strong>. Unparalleled
+					<strong>comfort</strong>, <strong>luxury</strong>, and <strong>performance</strong> on every flight.
+					Equipped with the latest in technology and amenities for a unique flight experience. Travel with us
+					and discover the <strong>luxury</strong> in the air!
+				</p>
+
+				<section id="aviones" class="tipos avion">
+
+					<article class="fade-in" data-id="1" data-title="Avion 1"
+						data-description="Descripción del Avion 1">
+						<a href="#" class="image"><img src="/img/Gulfstream 5/portada.png"
+								alt="avion de vuelo privado" /></a>
+						<h3>Gulfstream 5</h3>
+					</article>
+
+					<article class="fade-in" data-id="2" data-title="Avion 2"
+						data-description="Descripción del Avion 2">
+						<a href="#" class="image"><img src="/img/Challenger 600/portada.png"
+								alt="avion de vuelo privado" /></a>
+						<h3>Challenger 600</h3>
+					</article>
+
+					<article class="fade-in" data-id="3" data-title="Avion 3"
+						data-description="Descripción del Avion 3">
+						<a href="#" class="image"><img src="/img/Learjet 60/portada.png"
+								alt="avion de vuelo privado" /></a>
+						<h3>Learjet 60</h3>
+					</article>
+
+					<article class="fade-in" data-id="4" data-title="Avion 4"
+						data-description="Descripción del Avion 4">
+						<a href="#" class="image"><img src="/img/Learjet 45/portada.png"
+								alt="avion de vuelo privado" /></a>
+						<h3>Learjet 45</h3>
+					</article>
+
+					<article class="fade-in" data-id="5" data-title="Avion 5"
+						data-description="Descripción del Avion 5">
+						<a href="#" class="image"><img src="/img/Learjet 35/portada.png"
+								alt="avion de vuelo privado" /></a>
+						<h3>Learjet 35</h3>
+					</article>
+
+					<article class="fade-in" data-id="6" data-title="Avion 6"
+						data-description="Descripción del Avion 6">
+						<a href="#" class="image"><img src="/img/Learjet 31/portada.png"
+								alt="avion de vuelo privado" /></a>
+						<h3>Learjet 31</h3>
+					</article>
+
+					<article class="fade-in" data-id="7" data-title="Avion 7"
+						data-description="Descripción del Avion 7">
+						<a href="#" class="image"><img src="/img/Cessna Citation III/portada.png"
+								alt="avion de vuelo privado" /></a>
+						<h3>Cessna citation III</h3>
+					</article>
+
+					<article class="fade-in" data-id="8" data-title="Avion 8"
+						data-description="Descripción del Avion 8">
+						<a href="#" class="image"><img src="/img/King air 200/portada.png"
+								alt="avion de vuelo privado" /></a>
+						<h3>King air 200</h3>
+					</article>
+
+					<article class="fade-in" data-id="9" data-title="Avion 9"
+						data-description="Descripción del Avion 9">
+						<a href="#" class="image"><img src="/img/King air 90/portada.png"
+								alt="avion de vuelo privado" /></a>
+						<h3>King air 90</h3>
+					</article>
+
+					<article class="fade-in" data-id="10" data-title="Avion 10"
+						data-description="Descripción del Avion 10">
+						<a href="#" class="image"><img src="/img/Fairchild Metroliner III/portada.png"
+								alt="avion de vuelo privado" /></a>
+						<h3>Fairchild Metroliner III</h3>
+					</article>
+					<!--
+						<article class="fade-in" data-id="11" data-title="Avion 11"
+							data-description="Descripción del Avion 11">
+							<a href="#" class="image"><img src="img/recursos/portada.jpg"
+									alt="avion de vuelo privado" /></a>
+							<h3>Navajo 350</h3>
+						</article>
+-->
+				</section>
+
+			</div>
+		</section>
+
+		<div id="myModal" class="modal">
+			<!-- Contenido del modal -->
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h3 id="modal-title"></h3>
+				<p id="modal-description"></p>
+				<div id="modal-images"></div>
+			</div>
+		</div>
+
+		<section id="nosotros" class="wrapper style2 align-center">
+			<div class="inner">
+				<h2 class="major fade-in">About Us</h2>
+
+			</div>
+			<div class="inner">
+				<div>
+					<p class="descripcionNosotros fade-in">Welcome to BairesJet, leaders in the industry of
+						<strong>private jet rentals</strong> and <strong>charters</strong> in Buenos Aires,
+						Argentina. We stand out for offering <strong>executive flights</strong> and <strong>luxury
+							private flights</strong>. Our commitment to excellence and safety has led us to be
+						certified members of ARGUS, ensuring superior standards on every <strong>flight</strong>. We
+						have a wide fleet that includes <strong>private jets</strong>, luxury airplanes, and
+						helicopters, providing personalized transportation solutions to meet all your needs. Our
+						aircraft are designed to adapt to different types of runways, guaranteeing maximum
+						flexibility in your <strong>travels</strong>. Trust BairesJet for <strong>private jet
+							rentals</strong>, domestic and international <strong>private flights</strong>, where
+						safety, elegance, and efficiency come together to offer you an exclusive and unparalleled
+						experience.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section class="contacto">
+			<div class="style3">
+				<h2 class="align-center">Contact</h2>
+				<div class="redes-sociales">
+					<a href="https://www.instagram.com/bairesjet?igsh=MTA0cHRmc3BubDQybA==" target="_blank"
+						class="social-icon"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.linkedin.com/company/baires-jet/" target="_blank" class="social-icon"><i
+							class="fab fa-linkedin"></i></a>
+					<!--
+				<a href="https://twitter.com/tu_cuenta" target="_blank" class="social-icon"><i
+				class="fab fa-twitter"></i></a>
+				-->
+				</div>
+
+			</div>
+		</section>
+
+		<div id="contenedorBoton">
+			<span id="textoBoton"><strong>Get a quote<br>quickly</strong></span>
+			<i id="botonFlotante" class="fab fa-whatsapp"></i>
+		</div>
+
+
+		<!-- Scripts -->
+		<script src="/js/main.js"></script>
+
+</body>
+
+</html>
